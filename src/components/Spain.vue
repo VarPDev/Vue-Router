@@ -2,6 +2,7 @@
   <div class="hello">
     <h1>{{ msg }}</h1>
     <h2>Spain</h2>
+    <h3>Parameter id defined in vue router: {{ $route.params.id }}</h3>
     <ul>
       <li v-for="country in countries"><router-link :to="country.url">{{ country.name }}</router-link></li>
     </ul>

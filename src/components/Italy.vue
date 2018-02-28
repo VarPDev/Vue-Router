@@ -18,7 +18,7 @@ export default {
       countries: [
         {name: 'Home', url: '/'},
         {name: 'England', url: '/england'},
-        {name: 'Spain', url: '/spain'}
+        {name: 'Spain', url: '/spain/by_italy'}
       ]
     }
   },

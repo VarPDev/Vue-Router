@@ -10,10 +10,13 @@
     </div>
     <b>two-way data binding:</b> <span v-text="text"></span>
     <button v-on:click="clearMessage">Pulisci testo</button>
+    <child v-bind:my-message="parentMsg"></child>
   </div>
 </template>
 
 <script>
+import Child from './HelloWorld/Child.vue'
+
 export default {
   name: 'HelloWorld',
   data () {
@@ -22,11 +25,13 @@ export default {
       countries: [
         {name: 'Italy', url: '/italy'},
         {name: 'England', url: '/england'},
-        {name: 'Spain', url: '/spain'}
+        {name: 'Spain', url: '/spain/by_hello_world'}
       ],
-      text: ''
+      text: '',
+      parentMsg: 'two-way data binding from parent to child component'
     }
   },
+  components: {Child: Child},
   methods: {
     clearMessage: function () {
       if (this.text !== '') {

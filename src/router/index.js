@@ -39,9 +39,10 @@ export default new Router({
       ]
     },
     {
-      path: '/spain',
+      path: '/spain/:id',
       name: 'Spain',
       component: Spain
-    }
+    },
+    { path: '/france', redirect: '/england' }
   ]
 })
